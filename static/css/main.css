@@ -1,0 +1,433 @@
+body{
+    background-color:darkgray;
+}
+.nav{
+    display:flex;
+    background-color: black;
+    padding-bottom: 18px;
+    border-radius: 115px;
+}
+
+img{
+    width:186px;
+    height:auto;
+    border-radius: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-left: 68px;
+    margin-top: 4px;
+}
+
+.nav h1{
+    margin-left: 50px;
+    margin-top: 8px;
+    font-size: 57px;
+    font-family:'Lato', sans-serif;
+    color:#ffffff;
+}
+
+.nav h3{
+    margin-top : 78px;
+    margin-left: -337px;
+    font-size: 20px;
+    font-family:'Lato', sans-serif;
+    color:#ffffff;
+}
+.nav-links{
+    display: flex;
+    list-style:none ;
+    margin-left: -611px;
+    margin-top: 150px;
+}
+
+.nav-links li{
+    margin:25px;
+    font-size: larger;
+    
+
+    
+}
+.nav-links a {
+    color: var(--text-primary);
+    text-decoration:solid;
+    font-family: 'Lato', sans-serif;
+    font-weight:900;
+    transition: color 0.3s ease;
+    position: relative;  
+}
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 5px 10px;
+}
+
+.nav-links a::before, .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: transparent;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.nav-links a::before {
+    top: -2px;
+    left: -2px;
+    border-top: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+}
+
+.nav-links a::after {
+    bottom: -2px;
+    right: -2px;
+    border-bottom: 2px solid #ffffff;
+    border-right: 2px solid #ffffff;
+}
+
+.nav-links a:hover::before, .nav-links a:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.nav-links a:hover {
+    color:antiquewhite; /* Optional: Change color on hover */
+}
+
+/* about css */
+#about {
+    margin-top: 4px;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    min-height: 100vh; /* Full viewport height */
+    background-color: black;
+    border-radius: 115px;
+    overflow: hidden; /* Prevents content from spilling over rounded edges */
+    padding: 20px; /* Adds internal spacing */
+}
+#about .container {
+    text-align: center; /* Centers text within the container */
+    max-width: 800px; /* Limits container width */
+    color: #e0e0e0; /* Light gray text for contrast against black */
+    padding: 20px; /* Internal padding for content */
+}
+
+#about .container h2 {
+    font-size: xx-large; /* Kept as is, consider 2.5rem for precision */
+    font-family: 'Lato', sans-serif;
+    color: #ffffff; /* Pure white for clean look */
+    padding: 10px; /* Adds space around text */
+    border-bottom: 2px solid #ffffff; /* Simple underline */
+    letter-spacing: 1px; /* Slight spacing for elegance */
+    font-weight: 700; /* Bold but not extreme */
+}
+
+#about .container p{
+    font-family: sans-serif;
+    font-size: 2rem;
+    text-align:left;
+}
+/* skills css */
+#skills {
+    margin-top: 4px;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    min-height: 100vh; /* Full viewport height */
+    background-color: black;
+    border-radius: 115px;
+    overflow: hidden; /* Prevents content from spilling over rounded edges */
+    padding: 20px; /* Adds internal spacing */
+}
+
+#skills .container {
+    text-align: center; /* Centers text within the container */
+    max-width: 800px; /* Limits container width */
+    color: #e0e0e0; /* Light gray text for contrast against black */
+    padding: 20px; /* Internal padding for content */
+}
+
+#skills .container h2 {
+    font-size: xx-large; /* Kept as is, consider 2.5rem for precision */
+    font-family: 'Lato', sans-serif;
+    color: #ffffff; /* Pure white for clean look */
+    padding: 10px; /* Adds space around text */
+    border-bottom: 2px solid #ffffff; /* Simple underline */
+    letter-spacing: 1px; /* Slight spacing for elegance */
+    font-weight: 700; /* Bold but not extreme */
+}
+
+/* General layout for the grid of skills */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Creates three columns of equal width */
+    gap: 30px; /* Space between the skill items */
+    margin-top: 40px;
+    width: 101%;
+    height:90%;
+}
+
+/* Style for each individual skill item */
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px; /* Space between the skill name and the bar */
+}
+
+.skill-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* The outer container for the skill bar */
+.skill-bar {
+    width: 100%;
+    height: 6px;
+    background-color: #333333; /* Dark gray background for the bar */
+    border-radius: 3px;
+    overflow: hidden; /* Ensures the inner bar doesn't exceed the rounded corners */
+}
+
+/* The inner, filled part of the skill bar.
+   The width will be adjusted for each skill. */
+.skill-level {
+    height: 100%;
+    background-color: #e0e0e0; /* Light gray color for the progress bar */
+    border-radius: 3px;
+    transition: width 0.8s ease-in-out; /* Smooth transition for animation */
+}
+
+/* Individual skill levels (adjust percentages as needed) */
+.python { width: 95%; }
+.flask { width: 85%; }
+.cpp-java { width: 60%; }
+.sqlalchemy { width: 70%; }
+.git { width: 80%; }
+.sql { width: 90%; }
+.api { width: 88%; }
+.web-dev { width: 95%; }
+.numpy-pandas { width: 80%; }
+.matplotlib-seaborn { width: 70%; }
+.excel { width: 85%; }
+.ml { width: 50%; }
+
+/* Media query for responsiveness on smaller screens */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* Stack skills in a single column on mobile */
+    }
+}
+
+/* projects section*/
+#projects {
+    margin-top: 4px;
+    background-color: black;
+    border-radius: 30px;
+    padding: 50px 5%;
+    color: #fff;
+    text-align: center;
+    position: relative; /* Ensure proper stacking context */
+    overflow: hidden; /* Contain any overflow from cards */
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffffff;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+/* Container for all cards */
+#projects .projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    padding: 0 10px; /* Add padding to prevent edge clipping */
+}
+
+/* Project card styling */
+.project-card {
+    background: #111;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px; /* Ensure card has its own radius */
+    overflow: visible; /* Allow image to render fully */
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(255, 255, 255, 0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto; /* Preserve aspect ratio */
+    object-fit: cover;
+    display: block; /* Remove any inline spacing */
+    border-radius: 14px; /* Explicitly remove any inherited rounding */
+    -webkit-border-radius: 14px; /* For Safari/Chrome */
+    -moz-border-radius: 14px; /* For Firefox */
+    margin-left: 2px;
+}
+
+.project-info {
+    padding: 20px;
+}
+
+.project-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.project-info p {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.project-link {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.project-link:hover {
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+/* Tech tags styling */
+.tech-tags {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+/*contact*/
+/* Contact Section */
+#contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: black;
+  padding: 40px;
+  border-radius: 30px;
+  margin-top: 4px;
+}
+
+#contact .container {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#contact .container h2 {
+  font-size: 2rem;
+  font-family: 'Lato', sans-serif;
+  color: black;
+  margin-bottom: 10px;
+}
+
+#contact .container p {
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.contact-form .form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Lato', sans-serif;
+  outline: none;
+  background: transparent;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: black;
+  box-shadow: 0 0 8px rgba(74, 144, 226, 0.3);
+}
+
+/* Label styling */
+.contact-form label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #888;
+  font-size: 1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  background: #fff;
+  padding: 0 6px;
+  border-radius: 4px;
+}
+
+/* When focused or has text */
+.contact-form input:focus + label,
+.contact-form input:not(:placeholder-shown) + label,
+.contact-form textarea:focus + label,
+.contact-form textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 12px;
+  font-size: 0.8rem;
+  color: black;
+}
+
+.btn-submit {
+  background: black;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  padding: 14px 28px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 20px rgba(74, 144, 226, 0.4);
+}
+.copyright p{
+    text-align: center;
+}
+
+

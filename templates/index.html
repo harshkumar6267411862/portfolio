@@ -1,0 +1,216 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{%  block body %}
+<div class="nav">
+    <img src="{{ url_for('static', filename='mypic.jpeg') }}">
+    <h1>Harsh Kumar</h1>
+    <h3>Aspiring Data Scientist, Backend Developer, AI/ML Developer</h3>
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    
+</div>
+<section id="about">
+    <div class="container">
+        <h2>About Me</h2>
+        <p>Dedicated Computer Engineering student passionate about exploring Backend development, data analytics, 
+            and full-stack web solutions. Currently gaining hands-on experience with tools and frameworks like 
+            Python, Flask, SQL, and Data Science while working on end-to-end projects. With a strong expertise 
+            in Data Science, practical skills in building full-stack projects, and a track record of creating 
+            numerous chat applications and web automation tools, I am looking to apply my growing skills, 
+            curiosity, and problem-solving mindset in a supportive development or data-focused role to further 
+            my learning journey.</p>
+    </div>
+</section>
+<section id="skills">
+    <div class="container">
+        <h2>My Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <span class="skill-name">Python</span>
+                <div class="skill-bar">
+                    <div class="skill-level python"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">Flask</span>
+                <div class="skill-bar">
+                    <div class="skill-level flask"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">C++ / Java</span>
+                <div class="skill-bar">
+                    <div class="skill-level cpp-java"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">SQLAlchemy / Supabase</span>
+                <div class="skill-bar">
+                    <div class="skill-level sqlalchemy"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">Git / GitHub</span>
+                <div class="skill-bar">
+                    <div class="skill-level git"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">SQL</span>
+                <div class="skill-bar">
+                    <div class="skill-level sql"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">API Integration</span>
+                <div class="skill-bar">
+                    <div class="skill-level api"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">HTML / CSS / JavaScript</span>
+                <div class="skill-bar">
+                    <div class="skill-level web-dev"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">NumPy / Pandas</span>
+                <div class="skill-bar">
+                    <div class="skill-level numpy-pandas"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">Matplotlib / Seaborn</span>
+                <div class="skill-bar">
+                    <div class="skill-level matplotlib-seaborn"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">Excel (Dashboards & Analysis)</span>
+                <div class="skill-bar">
+                    <div class="skill-level excel"></div>
+                </div>
+            </div>
+            <div class="skill-item">
+                <span class="skill-name">Machine Learning (Basics)</span>
+                <div class="skill-bar">
+                    <div class="skill-level ml"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Projects Section -->
+<section id="projects" class="projects">
+  <h2>My Projects</h2>
+
+  <!-- Use .projects-container instead of .container -->
+  <div class="projects-container">
+    
+    <!-- Project 1 -->
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='dashboard.png') }}" alt="Filmscope dashboard screenshot">
+      <div class="project-info">
+        <h3>Filmscope: A Dashboard Overview of Global Movie Trends</h3>
+        <p>
+          This project focuses on exploratory data analysis (EDA) and visualization of a large-scale 
+          movie dataset containing details such as titles, genres, ratings, budgets, and worldwide collections. 
+          Using the dataset, I performed deep insights into movie trends, 
+          audience ratings, and revenue patterns, and built a dashboard for interactive exploration.
+        </p>
+        <a href="#" target="_blank" class="project-link">Live Link</a>
+
+        <!-- Tech Tags -->
+        <div class="tech-tags">
+          <span>Excel</span>
+          <span>Macros</span>
+          <span>Data Analysis</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='project2.png') }}" alt="QR Restaurant Project Screenshot">
+      <div class="project-info">
+        <h3>QR Based Restaurant Management Website</h3>
+        <p>
+          Full-stack web app for restaurants. Features: menu management, 
+          order handling, customer interaction system, and a clean responsive UI.
+        </p>
+        <a href="#" target="_blank" class="project-link">Live Link</a>
+
+        <!-- Tech Tags -->
+        <div class="tech-tags">
+          <span>React</span>
+          <span>Node.js</span>
+          <span>Express</span>
+          <span>MongoDB</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- (Optional) Add more project-card blocks here -->
+
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Get in Touch</h2>
+    <p>
+      I'm always open to collaboration, freelance projects, or simply connecting 
+      with fellow learners and developers. Feel free to reach out!
+    </p>
+
+    <form class="contact-form" method="POST" action="/">
+  <div class="form-group">
+    <input type="text" name="name" id="name" placeholder=" " required>
+    <label for="name">Your Name</label>
+  </div>
+
+  <div class="form-group">
+    <input type="email" name="email" id="email" placeholder=" " required>
+    <label for="email">Your Email</label>
+  </div>
+
+  <div class="form-group">
+    <textarea name="message" id="message" rows="5" placeholder=" " required></textarea>
+    <label for="message">Your Message</label>
+  </div>
+
+  <button type="submit" class="btn-submit">Send Message</button>
+</form>
+
+  </div>
+</section>
+<footer>
+  <div class="container">
+    <div class="copyright">
+      <p>© 2025 Harsh Kumar. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+{% if success %}
+<script>
+  Swal.fire({
+    icon: 'success',
+    title: 'Message Sent!',
+    text: 'Thank you for reaching out. I will get back to you soon!',
+    confirmButtonColor: '#000'
+  })
+</script>
+{% endif %}
+
+
+{%  endblock %}
