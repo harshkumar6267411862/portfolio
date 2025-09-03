@@ -1,8 +1,16 @@
-        {
-          "rewrites": [
-            {
-              "source": "/(.*)",
-              "destination": "/index.html"
-            }
-          ]
-        }
+      {
+  "version": 2,
+  "builds": [
+    {
+      "src": "portfolio.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "portfolio.py"
+    }
+  ]
+}
