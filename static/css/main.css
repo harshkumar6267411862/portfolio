@@ -430,6 +430,26 @@ img{
     text-align: center;
 }
 
+/* Social Links in Navbar */
+.nav-social {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto; /* Push to the right */
+    margin-right: 60px; /* Optional spacing */
+}
+
+.nav-social a img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+.nav-social a img:hover {
+    transform: scale(1.2);
+}
+
+
 /* Tablets / Medium Screens */
 @media (max-width: 1024px) {
 
@@ -454,6 +474,7 @@ img{
         margin-left: -400px;
         margin-top: 120px;
     }
+    
 
     #about .container p,
     #skills .container p {
@@ -556,6 +577,14 @@ img{
     #contact .container {
         padding: 20px;
     }
+    @media (max-width: 768px) {
+    .nav-social {
+        margin-left: 0;
+        margin-top: 10px;
+        gap: 10px;
+    }
+}
+
 }
 
 /* Mobile / Extra Small Screens */
